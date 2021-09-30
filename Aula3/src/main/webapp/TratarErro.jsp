@@ -6,8 +6,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Erros encontrados.</h1>
+        <h1>Erros encontrados...</h1>
         <%=exception%>
+        
         
     </body>
 </html>

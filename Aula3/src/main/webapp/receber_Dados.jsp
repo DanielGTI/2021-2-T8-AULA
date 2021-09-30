@@ -1,4 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" errorPage="TratarErro.jsp" %>
+<jsp:useBean id="item" class="Suporte.Estoque"/>
+<jsp:setProperty name="item" property="*"/>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,9 +8,11 @@
         <title>JSP Resposta</title>
     </head>
     <body>
-        <h2>Cadastro de itens</h2>
-        
+        <h2>Cadastro de itens</h2>     
         <%
+            /*
+            //  PROCEDIMENTO ANTERIOR
+            
             int codigo = Integer.parseInt( request.getParameter("codigo") );
             String descricao = request.getParameter("decricao");
             String unidade = request.getParameter("unidade");
@@ -18,10 +22,13 @@
             
             out.print("<br>Código do produto = " + codigo);
             out.print("<br>Descrição do produto = " + descricao);
-
+            */
         %>
+        
         <pre>
-Código do produto = <%=codigo%>
+Código do produto = <%=item.getCodigo()%>
+Descrição do produto = <%=item.getDescricao()%>
+Unidade do produto = <%=item.getUnidade()%>
         </pre>
     </body>
 </html>
