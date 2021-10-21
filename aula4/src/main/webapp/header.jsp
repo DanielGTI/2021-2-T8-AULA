@@ -15,8 +15,12 @@
     <!-- NProgress -->
     <link href="css/nprogress.css" rel="stylesheet">
 
+    <!-- Animate.css -->
+    <link href="css/animate.min.css" rel="stylesheet">
+    
     <!-- Custom Theme Style -->
     <link href="css/custom.css" rel="stylesheet">
+    
     
     <script src="js/jquery.js"></script>
 </head>

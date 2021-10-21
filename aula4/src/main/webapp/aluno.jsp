@@ -9,7 +9,7 @@
                 
                 <%@include file="sidebar.jsp" %>
                 <%@include file="topmenu.jsp" %>
-                <%@include file="view/view_cliente.jsp" %>
+                <%@include file="view/view_aluno.jsp" %>
                 <%@include file="footer.jsp" %>
                 <%@include file="script.js" %>    
             </div>
