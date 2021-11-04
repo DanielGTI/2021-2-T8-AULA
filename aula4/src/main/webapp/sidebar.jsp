@@ -1,3 +1,17 @@
+<%
+    try {
+        String login_session = (String) session.getAttribute("usuario");
+        
+        if( login_session.equals("") ){
+            response.sendRedirect("");
+        }
+        
+    }catch(Exception e){
+        response.sendRedirect("");
+    }
+    
+%>   
+
         <!-- gentelella-master/production/plain_page.html = 26 a 171 -->
         <!-- sidebar.jsp -->
         <div class="col-md-3 left_col">
@@ -15,7 +29,7 @@
                     </div>
                     <div class="profile_info">
                         <span>Bem vindo,</span>
-                        <h2>Aluno...</h2>
+                        <h2><% out.print(session.getAttribute("usuario")); %></h2>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -98,24 +112,7 @@
                                     <li><a href="pricing_tables.html">Pricing Tables</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="#level1_1">Level One</a>
-                                    </li>
-                                    <li><a>Level One<span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu">
-                                            <li class="sub_menu"><a href="level2.html">Level Two</a>
-                                            </li>
-                                            <li><a href="#level2_1">Level Two</a>
-                                            </li>
-                                            <li><a href="#level2_2">Level Two</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#level1_2">Level One</a>
-                                    </li>
-                                </ul>
-                            </li>                  
+                
                             <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
                         </ul>
                     </div>
