@@ -9,7 +9,7 @@
               <form action="./Logar" method="post">
               <h1>Login do Sistema</h1>
               <div>
-                  <input type="text" name="user" id="user" class="form-control" placeholder="Username" required="" />
+                  <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Username" required="" />
               </div>
               <div>
                 <input type="password" name="senha" id="senha" class="form-control" placeholder="Password" required="" />

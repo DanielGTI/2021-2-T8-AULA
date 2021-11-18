@@ -13,7 +13,7 @@ public class ConnectionFactory {
    
     public Connection getConnection(){
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             conexao = DriverManager.getConnection( url_conexao, usuario, senha );
         }catch(SQLException ex){
             Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);

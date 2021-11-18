@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+import Model.dao.UsuarioDAO;
 
 public class Logar extends HttpServlet {
 
@@ -30,18 +30,20 @@ public class Logar extends HttpServlet {
         
         //processRequest(request, response);
         try{
+            UsuarioDAO user = new UsuarioDAO();
             
-            String login = request.getParameter("user");
+            String login = request.getParameter("usuario");
             String senha = request.getParameter("senha");
             
             HttpSession session = request.getSession();
             
-            if( login.equals("renata") && senha.equals("123") ){
+            if( user.autenticar(login, senha) ){
                 response.sendRedirect("aluno.jsp");
                 session.setAttribute("usuario", login);
                 session.setMaxInactiveInterval(20);
             }else{
                 response.sendRedirect("");
+                session.invalidate();
             }
         }catch(Exception e){
             response.sendRedirect("");
