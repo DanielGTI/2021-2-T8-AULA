@@ -41,7 +41,15 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      Add content to the page ...
+                      <br>1 - Nome
+                      <br>2 - RA
+                      <br>3 - email
+                      <br>4 - telefone
+                      <br>5 - CPF
+                      <br>6 - DataNascimento
+                      <br>7 - Endereço
+                      <br>8 - CEP
+
                   </div>
                 </div>
               </div>
